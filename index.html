@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Akshay Varma Rudraraju</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/757e7407dd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span>Akshay Varma<br>Rudraraju</span> from India</h1>
+        </div>
+    </div>
+</div>
+<!----------- ABOUT--------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col">
+                <h1 class="sub-title">About Me</h1>
+                <p class="p1">Hi, I’m Akshay Varma, graduated at the Department of Computer Science Engineering, Malla Reddy University, Telangana, India.</p>
+                <p class="p2">I'm particularly passionate about getting adopted to the latest technologies and I love using tools which bring innovative ideas to life. I believe in user-centered design and data-driven decision-making ensuring that every project I work on achieve client and user satisfaction.</p>
+                <p class="p3">Feel free to reach out if you'd like to collaborate, or check out some of my recent projects below!!!</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Language</span><br>Python</li>
+                        <li><span>Web Development</span><br>HTML,CSS</li>
+                        <li><span>Database Management</span><br>MySQL</li>
+                        <li><span>Cloud Computing</span><br>Amazon Web Services(AWS)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Bachelor's - Computer Science Engineering (2020 - 2024)</span><br>Malla Reddy University, Hyderabad<br>Graduated with 8.44 GPA</li>
+                        <li><span>Intermediate - MPC (2018 - 2020)</span><br>Sri Chaitanya Junior College, Hyderabad<br>Graduated with 80.4%</li>
+                        <li><span>Schooling - SSC</span><br>ST Marys High School<br>Graduated with 8.7 GPA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------projecxts------------>
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Stock Trend Analysis</h2>
+                <p>It is a stock market trend analysis project that predicts the price of the stock using a deep learning model LSTM.</p>
+                <i class="fa-brands fa-github"></i>
+                <a href="#">Source code</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Car Price Prediction</h2>
+                <p>It is a machine learning web application that can predict used car prices by taking some inputs from the user.</p>
+                <i class="fa-brands fa-github"></i>
+                <a href="#">Source code</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-display"></i>
+                <h2>Airport Authority Data Analysis</h2>
+                <p>This project is using Power BI, It shows the detailed review of the airport data in the form of dashboards which is user friendly.</p>
+                <i class="fa-brands fa-github"></i>
+                <a href="#">Source code</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------------Portfolio------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Resume</h1>
+        <div class="resume">
+            <p>You can download my resume here!!! </p>
+            <a href="Images/Akshay Resume.pdf" download class="btn">Download Resume</a>
+        </div>
+    </div>
+</div>
+
+<!-----------------Contact------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i> akshayvarma0722@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9573536987</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/akshayvarma0722/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/akshay-varma-22"><i class="fa-brands fa-github big"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Akshay. <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+ 
+</body>
+    
+</html>
