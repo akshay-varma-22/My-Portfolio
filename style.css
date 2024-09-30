@@ -10,6 +10,7 @@ html{
 body{
     background: #080808;
     color: #fff;
+    padding-top: 10px;
 }
 #header{
     width: 100%;
@@ -19,7 +20,7 @@ body{
     background-position: center;
 }
 .container{
-    padding: 50px 10%;
+    padding: 30px 5%;
 }
 
 nav{
@@ -79,8 +80,20 @@ nav ul li a:hover::after{
     color: #ababab;
     text-align: justify;
 }
-.about-col{
-    flex-basis: 100%;
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis:  60%;
 }
 .sub-title{
     font-size: 60px;
@@ -105,7 +118,7 @@ nav ul li a:hover::after{
 
 .tab-titles{
     display: flex;
-    margin: 20px 0 40px;
+    margin: 60px 0 40px;
 }
 .tab-links{
     margin-right: 70px;
@@ -259,3 +272,71 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 /*-------------CSS For small screen------------*/
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 980px){
+    #header{
+        background-image: url(Images/mobilebackground.png);
+    }
+    .header-text{
+        margin-top: 35%;
+        font-size: 90px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .about-col-2{
+        font-size: 18px;
+    }
+    #projects{
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .projects-list{
+        display: block;
+    }
+    .projects-list div a{
+        padding-left: 20px;
+        font-size: 20px;
+    }
+    
+}

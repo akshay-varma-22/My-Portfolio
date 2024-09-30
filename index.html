@@ -13,13 +13,15 @@
     <div class="container">
         <nav>
             <img src="Images/logo.png" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>UI/UX Designer</p>
@@ -31,7 +33,10 @@
 <div id="about">
     <div class="container">
         <div class="row">
-            <div class="about-col">
+            <div class="about-col-1">
+                <img src="Images/bg.jpeg"> 
+            </div>
+            <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p class="p1">Hi, I’m Akshay Varma, graduated at the Department of Computer Science Engineering, Malla Reddy University, Telangana, India.</p>
                 <p class="p2">I'm particularly passionate about getting adopted to the latest technologies and I love using tools which bring innovative ideas to life. I believe in user-centered design and data-driven decision-making ensuring that every project I work on achieve client and user satisfaction.</p>
@@ -43,7 +48,7 @@
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li><span>Programming Language</span><br>Python</li>
-                        <li><span>Web Development</span><br>HTML,CSS</li>
+                        <li><span>Web Development</span><br>HTML,CSS,Java Script,React</li>
                         <li><span>Database Management</span><br>MySQL</li>
                         <li><span>Cloud Computing</span><br>Amazon Web Services(AWS)</li>
                     </ul>
@@ -69,7 +74,7 @@
                 <h2>Stock Trend Analysis</h2>
                 <p>It is a stock market trend analysis project that predicts the price of the stock using a deep learning model LSTM.</p>
                 <i class="fa-brands fa-github"></i>
-                <a href="#">Source code</a>
+                <a href="https://github.com/akshay-varma-22/Stock-Trend-Analysis">Source code</a>
             </div>
             <div>
                 <i class="fa-solid fa-crop"></i>
@@ -139,6 +144,19 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
 </script>
  
 </body>
